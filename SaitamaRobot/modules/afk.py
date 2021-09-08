@@ -59,7 +59,7 @@ def no_longer_afk(update: Update, context: CallbackContext):
             options = [
                 'Okaerinasai {}-kun~', 'welcome back user-kun', 'ready to gamble {}-chan ?',
                 'Okaerinasai', 'Yaneroooo',
-                'missed you {}-san okaerinasai~', 'that was weird I didn't missed you for once {}-chan'
+                'missed you {}-san okaerinasai~', 'that was weird I didnt missed you for once {}-chan'
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
