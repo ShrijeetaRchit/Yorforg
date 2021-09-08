@@ -74,19 +74,19 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Yahho Watashi Nobara Desu, I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/1f054a1f6e857f6c4428d.jpg)
+Hello there , I am Yumeko Jabami , I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/b713d6ffca13aa4d69a9a.jpg)
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ sᴜᴍᴍᴏɴ ➕️", url="t.me/RikasanRobot?startgroup=true"),
+            text="Start Gamble", url="t.me/yumekojabami_robot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Nobara_"),
         InlineKeyboardButton(
-            text="ɢʀᴏᴜᴘ", url=f"https://t.me/The_Phantom_Troupe"),
-        InlineKeyboardButton(text="⛩Nobara Support⛩ ", url=f"https://t.me/supprt_sora"
+            text="🔥Anime World 🔥", url=f"https://t.me/Anime_English_Dub_Devil"),
+        InlineKeyboardButton(text="💥Devil's Territory 💥", url=f"https://t.me/Devils_Territory"
             
         
         ),
