@@ -98,7 +98,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Hai, Nobara San Desu[.](https://telegra.ph/file/4c130e65bac8163463130.mp4) 
+Hai hai , I am neko-yumeko[.](https://telegra.ph/file/4c130e65bac8163463130.mp4) 
 """
 
 yone_IMG = "https://telegra.ph/file/2aea4cfb32a76c857217c.jpg"
@@ -390,7 +390,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi."👋" I'm *Nobara*
+            text=""" Hi."👋" I'm *Yumeko*
                  \nHere is the [Source Code](https://github.com/Noob-kittu/YoneRobot) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
