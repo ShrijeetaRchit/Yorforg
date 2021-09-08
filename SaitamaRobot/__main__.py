@@ -80,7 +80,7 @@ Hello there , I am Yumeko Jabami , I am Groups Management Bot !! I can Help You 
 buttons = [
     [
         InlineKeyboardButton(
-            text="Start Gamble", url="t.me/yumekojabami_robot?startgroup=true"),
+            text="☠️Start Gamble☠️", url="t.me/yumekojabami_robot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Nobara_"),
@@ -92,18 +92,18 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="ꜱᴛᴀʀᴛ ᴜsɪɴɢ ʙᴏᴛ", callback_data="help_back"),
+        InlineKeyboardButton(text="✅ Commands ✅", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
-Hai, Nobara San Desu[.](https://telegra.ph/file/658c0bfcd61c32c6bbeb5.mp4) 
+Hai, Nobara San Desu[.](https://telegra.ph/file/4c130e65bac8163463130.mp4) 
 """
 
 yone_IMG = "https://telegra.ph/file/2aea4cfb32a76c857217c.jpg"
 
-DONATE_STRING = """Durov Is Paying For My Expenses No Need To Donate"""
+DONATE_STRING = """too lazy to add donate strings so leave it"""
 
 IMPORTED = {}
 MIGRATEABLE = []
