@@ -103,6 +103,8 @@ Hai hai , I am neko-yumeko[.](https://telegra.ph/file/b23d290b8ec810bf6d2ee.jpg)
 
 yone_IMG = "https://telegra.ph/file/2aea4cfb32a76c857217c.jpg"
 
+YUMEKOIMGSTART = """https://telegra.ph/file/aecf1d14d682d88ec1ad9.jpg"""
+
 DONATE_STRING = """too lazy to add donate strings so leave it"""
 
 IMPORTED = {}
@@ -212,8 +214,10 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
+        update.effective_message.reply_image(
+               YUMEKOIMGSTART)
         update.effective_message.reply_text(
-            "I am ready to gamble\n<b>Haven't slept since:</b> <code>{}</code>\n\n\n\n\n(https://telegra.ph/file/aecf1d14d682d88ec1ad9.jpg)".format(
+            "I am ready to gamble\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
