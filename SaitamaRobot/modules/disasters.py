@@ -383,7 +383,7 @@ def rmgodlydemon(update: Update, context: CallbackContext) -> str:
 @run_async
 @dev_plus
 @gloggable
-def removesudo(update: Update, context: CallbackContext) -> str:
+def removecommandment(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
