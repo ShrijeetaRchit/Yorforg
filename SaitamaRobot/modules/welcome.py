@@ -210,8 +210,9 @@ def new_member(update: Update, context: CallbackContext):
 
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
-                update.effective_message.reply_text(
-                    "Be Patient! A member of the Main System just joined",
+                update.effective_message.reply_photo(
+                     DEV_WEL ,
+                    caption=f'Be Patient! A member of the Main System just joined',
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
@@ -223,8 +224,9 @@ def new_member(update: Update, context: CallbackContext):
 
             # Welcome Sudos
             elif new_mem.id in DRAGONS:
-                update.effective_message.reply_text(
-                    "Whoa! A Legend disaster just joined! Stay Alert!",
+                update.effective_message.reply_photo(
+                    SUDO_WEL,
+                    caption=f'Whoa! A Legend disaster just joined! Stay Alert!',
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
