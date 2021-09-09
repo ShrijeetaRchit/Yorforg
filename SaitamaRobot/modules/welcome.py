@@ -73,6 +73,13 @@ ENUM_FUNC_MAP = {
 
 VERIFIED_USER_WAITLIST = {}
 
+OWNER_JOIN = """PRAISE YOURSELVES! THE DEVIL HIMSELF JUST JOINED YOUR CHAT!"""
+
+DEVIL = """https://telegra.ph/file/e0daff60bddcdde3e19d2.jpg"""
+
+DEV_WEL = """https://telegra.ph/file/f9e591f0900ca59db2c0a.jpg"""
+
+SUDO_WEL = """https://telegra.ph/file/2ca148f1e4295c8e72969.jpg"""
 
 # do not async
 def send(update, message, keyboard, backup_message):
@@ -189,8 +196,9 @@ def new_member(update: Update, context: CallbackContext):
 
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                update.effective_message.reply_text(
-                    "PRAISE YOURSELVES! THE DEVIL HIMSELF JUST JOINED YOUR CHAT[!](https://telegra.ph/file/e0daff60bddcdde3e19d2.jpg)", 
+                update.effective_message.reply_photo(
+                    DEVIL,
+                    caption = OWNER_JOIN, 
                        reply_to_message_id=reply
                 )
                 welcome_log = (
