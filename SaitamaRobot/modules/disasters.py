@@ -726,7 +726,7 @@ SUPPORT_HANDLER = CommandHandler(("addsupport", "adddemon"), addsupport)
 TIGER_HANDLER = CommandHandler(("addtiger"), addtiger)
 WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addwolf"), addwhitelist)
 
-RMDEV_HANDLER = CommandHandler(("rmgodlydemon", "removecommandment"), rmgodlydemon)
+RMPIRO_HANDLER = CommandHandler(("rmgodlydemon", "removecommandment"), rmgodlydemon)
 UNSUDO_HANDLER = CommandHandler(("removecommandment", "removedragon"), removecommandment)
 UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removedemon"),
                                    removesupport)
