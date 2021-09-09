@@ -12,7 +12,7 @@ from SaitamaRobot.event import register as nobara
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "Hi Niggs I Call To All Of You"
+    mentions = "Hi user-kun someone called you"
     chat = await event.get_input_chat()
     async for x in telethn.iter_participants(chat, 100):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
