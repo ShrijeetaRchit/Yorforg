@@ -720,14 +720,14 @@ Group admins/group owners do not need these commands.
 Visit @{SUPPORT_CHAT} for more information.
 """
 
-DEV_HANDLER = CommandHandler(("addgodlydemon", "addsudo"), addgodlydemon)
-SUDO_HANDLER = CommandHandler(("addcommandment", "adddragon"), addsudo)
+DEV_HANDLER = CommandHandler(("addgodlydemon", "addcommandment"), addgodlydemon)
+SUDO_HANDLER = CommandHandler(("addcommandment", "adddragon"), addcommandment)
 SUPPORT_HANDLER = CommandHandler(("addsupport", "adddemon"), addsupport)
 TIGER_HANDLER = CommandHandler(("addtiger"), addtiger)
 WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addwolf"), addwhitelist)
 
-RMDEV_HANDLER = CommandHandler(("rmgodlydemon", "removesudo"), rmgodlydemon)
-UNSUDO_HANDLER = CommandHandler(("removecommandment", "removedragon"), removesudo)
+RMDEV_HANDLER = CommandHandler(("rmgodlydemon", "removecommandment"), rmgodlydemon)
+UNSUDO_HANDLER = CommandHandler(("removecommandment", "removedragon"), removecommandment)
 UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removedemon"),
                                    removesupport)
 UNTIGER_HANDLER = CommandHandler(("removetiger"), removetiger)
