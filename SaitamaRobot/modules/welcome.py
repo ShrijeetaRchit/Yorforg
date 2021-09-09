@@ -190,7 +190,7 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "PRAISE YOURSELVES! MY MASTER JUST JOINED YOUR CHAT!", 
+                    "PRAISE YOURSELVES! THE DEVIL HIMSELF JUST JOINED YOUR CHAT[!](https://telegra.ph/file/e0daff60bddcdde3e19d2.jpg)", 
                        reply_to_message_id=reply
                 )
                 welcome_log = (
