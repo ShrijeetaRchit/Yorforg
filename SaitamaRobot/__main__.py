@@ -214,7 +214,7 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_image(
+        update.effective_message.reply_photo(
                YUMEKOIMGSTART)
         update.effective_message.reply_text(
             "I am ready to gamble\n<b>Haven't slept since:</b> <code>{}</code>".format(
