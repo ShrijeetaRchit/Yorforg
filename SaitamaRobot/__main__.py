@@ -98,7 +98,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Hai hai , I am neko-yumeko[.](https://telegra.ph/file/4c130e65bac8163463130.mp4) 
+Hai hai , I am neko-yumeko[.](https://telegra.ph/file/b23d290b8ec810bf6d2ee.jpg) 
 """
 
 yone_IMG = "https://telegra.ph/file/2aea4cfb32a76c857217c.jpg"
@@ -213,7 +213,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I am ready to gamble [UwU](https://telegra.ph/file/aecf1d14d682d88ec1ad9.jpg) \n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "I am ready to gamble\n<b>Haven't slept since:</b> <code>{}</code>\n\n\n\n\n(https://telegra.ph/file/aecf1d14d682d88ec1ad9.jpg)".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
