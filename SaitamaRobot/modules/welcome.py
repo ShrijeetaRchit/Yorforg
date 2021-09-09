@@ -73,7 +73,7 @@ ENUM_FUNC_MAP = {
 
 VERIFIED_USER_WAITLIST = {}
 
-OWNER_JOIN = """PRAISE YOURSELVES! THE DEVIL HIMSELF JUST JOINED YOUR CHAT!"""
+OWNER_JOIN = """Praise yourself! Devil himself have joined the chat!!"""
 
 DEVIL = """https://telegra.ph/file/e0daff60bddcdde3e19d2.jpg"""
 
