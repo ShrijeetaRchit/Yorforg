@@ -77,9 +77,9 @@ OWNER_JOIN = """Praise yourself! Devil himself have joined the chat!!"""
 
 DEVIL = """https://telegra.ph/file/e0daff60bddcdde3e19d2.jpg"""
 
-DEV_WEL = """https://telegra.ph/file/f9e591f0900ca59db2c0a.jpg"""
+DEV_WEL = """https://telegra.ph/file/2ca148f1e4295c8e72969.jpg"""
 
-SUDO_WEL = """https://telegra.ph/file/2ca148f1e4295c8e72969.jpg"""
+SUDO_WEL = """https://telegra.ph/file/f9e591f0900ca59db2c0a.jpg"""
 
 # do not async
 def send(update, message, keyboard, backup_message):
