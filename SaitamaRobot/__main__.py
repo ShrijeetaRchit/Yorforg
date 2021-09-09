@@ -215,9 +215,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-               YUMEKOIMGSTART)
-        update.effective_message.reply_text(
-            "I am ready to gamble\n<b>Haven't slept since:</b> <code>{}</code>".format(
+               YUMEKOIMGSTART, caption=f'I am ready to gamble\n<b>Haven't slept since:</b> <code>{}</code>'.format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
