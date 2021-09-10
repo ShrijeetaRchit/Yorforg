@@ -80,13 +80,13 @@ Hello there , I am Yumeko Jabami , I am Groups Management Bot !! I can Help You 
 buttons = [
     [
         InlineKeyboardButton(
-            text="☠️Start Gamble☠️", url="t.me/yumekojabami_robot?startgroup=true"),
+            text="☠️ Take me to Gambling ☠️", url="t.me/yumekojabami_robot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="Nobara_"),
+        InlineKeyboardButton(text="⚙️Support+GLogs⚙️ ", url=f"https://t.me/YumekoJabamiUpdates/11"),
         InlineKeyboardButton(
-            text="🔥Anime World 🔥", url=f"https://t.me/Anime_English_Dub_Devil"),
-        InlineKeyboardButton(text="💥Devil's Territory 💥", url=f"https://t.me/Devils_Territory"
+            text="🔥Anime&Group🔥", url=f"https://t.me/Anime_English_Dub_Devil/686"),
+        InlineKeyboardButton(text="📢Updates📢", url=f"https://t.me/YumekoJabamiUpdates"
             
         
         ),
