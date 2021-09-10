@@ -83,10 +83,10 @@ buttons = [
             text="☠️ Take me to Gambling ☠️", url="t.me/yumekojabami_robot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="⚙️Support+GLogs⚙️ ", url=f"https://t.me/YumekoJabamiUpdates/11"),
+        InlineKeyboardButton(text="⚙️Support⚙️ ", url=f"https://t.me/yumeko_support"),
         InlineKeyboardButton(
-            text="🔥Anime&Group🔥", url=f"https://t.me/Anime_English_Dub_Devil/686"),
-        InlineKeyboardButton(text="📢Updates📢", url=f"https://t.me/YumekoJabamiUpdates"
+            text="🔥Anime🔥", url=f"https://t.me/Anime_English_Dub_Devil/686"),
+        InlineKeyboardButton(text="📢Updates📢", url=f"https://t.me/YumekoJabamiUpdates/11"
             
         
         ),
