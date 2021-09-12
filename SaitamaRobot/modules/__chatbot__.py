@@ -112,14 +112,14 @@ __mod_name__ = "ChatBot"
 
 
 __help__ = """
-Chatbot utilizes the Kuki API and allows Cutiepii to talk and provides a more interactive group chat experience.
+Chatbot utilizes the Kuki API and allows Yumeko to talk and provides a more interactive group chat experience.
 
 *Commands:* 
 *Admins only:*
-   ➢ `addchat`*:* Enables Chatbot mode in the chat.
-   ➢ `rmchat`*:* Disables Chatbot mode in the chat.
+   • `addchat`*:* Enables Chatbot mode in the chat.
+   • `rmchat`*:* Disables Chatbot mode in the chat.
    
-Reports bugs at @Black_Knights_Union_Support
+Reports bugs at @Yumeko_Support
 """
 
 __mod_name__ = "ChatBot"
