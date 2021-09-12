@@ -75,9 +75,9 @@ VERIFIED_USER_WAITLIST = {}
 
 OWNER_JOIN = """Praise yourself! Devil himself have joined the chat!!"""
 
-DEVIL = """https://telegra.ph/file/e0daff60bddcdde3e19d2.jpg"""
+DEVIL = """https://telegra.ph/file/2ca148f1e4295c8e72969.jpg"""
 
-DEV_WEL = """https://telegra.ph/file/2ca148f1e4295c8e72969.jpg"""
+DEV_WEL = """https://telegra.ph/file/f9e591f0900ca59db2c0a.jpg"""
 
 SUDO_WEL = """https://telegra.ph/file/f9e591f0900ca59db2c0a.jpg"""
 
@@ -226,7 +226,7 @@ def new_member(update: Update, context: CallbackContext):
             elif new_mem.id in DRAGONS:
                 update.effective_message.reply_photo(
                     SUDO_WEL,
-                    caption=f'Whoa! A Legend disaster just joined! Stay Alert!',
+                    caption=f'Whoa! A Demon with a Commandment just joined! Stay Alert!',
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
