@@ -467,7 +467,7 @@ def get_help(update: Update, context: CallbackContext):
             InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="help_back"),
                                 InlineKeyboardButton(
-                                    text="Group", url="https://t.me/The_Phantom_Troupe"
+                                    text="Group", url="https://t.me/Devils_Territory"
                                 )]]
             ),
         )
@@ -691,7 +691,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "A Jujutsu Sorcerer Never Sleeps")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am ready to Gamble")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
@@ -737,7 +737,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Nigga Nigga Small Dick Nigga Shame On You")
+        LOGGER.info("getting ready to start up")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
