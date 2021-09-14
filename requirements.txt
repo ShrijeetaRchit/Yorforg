@@ -13,7 +13,6 @@ zalgo-text
 geopy
 nltk
 psutil
-aiohttp>=2.2.5
 Pillow>=4.2.0
 CurrencyConverter
 #googletrans
@@ -33,7 +32,6 @@ cachetools
 fontTools
 gtts
 pyrogram
-
 Python_arq
 redis
 nekos.py
@@ -60,3 +58,5 @@ img2pdf
 nhentai.py
 heroku3
 opencv-python
+aiohttp
+aiofiles
