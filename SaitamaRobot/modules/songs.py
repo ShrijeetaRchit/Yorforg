@@ -7,7 +7,7 @@ import aiohttp
 import youtube_dl
 
 from pyrogram import filters
-from SaitamaRobot import pgram
+from SaitamaRobot import pbot
 from youtube_search import YoutubeSearch
 from SaitamaRobot.pyroerror import capture_err
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
@@ -18,7 +18,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
 
-@pgram.on_message(filters.command(['song']))
+@pbot.on_message(filters.command(['song']))
 def song(client, message):
 
     user_id = message.from_user.id 
