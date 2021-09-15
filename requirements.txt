@@ -60,3 +60,4 @@ heroku3
 opencv-python
 aiohttp
 aiofiles
+youtube_search
