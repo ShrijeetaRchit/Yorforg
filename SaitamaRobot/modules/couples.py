@@ -9,7 +9,7 @@ from SaitamaRobot.modules.mongo.couples_mongo import get_couple, save_couple
 __mod_name__ = "Couples"
 
 __help__ = """
-• /couple = chooses two random members of group as couples
+• '/couple'*:* chooses two random members of group as couples
 """
 
 # Date and time
