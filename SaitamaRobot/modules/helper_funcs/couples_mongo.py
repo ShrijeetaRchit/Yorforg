@@ -1,4 +1,4 @@
-from SaitamaRobot import db
+from SaitamaRobot import sqlalchemy as db
 from typing import Dict, List, Union
 
 
