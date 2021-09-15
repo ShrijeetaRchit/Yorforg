@@ -4,7 +4,7 @@ from datetime import datetime
 from pyrogram import filters
 from SaitamaRobot import pbot as app, BOT_USERNAME
 from SaitamaRobot.utils.errors import capture_err
-from SaitamaRobot.modules.mongo.couples_mongo import get_couple, save_couple
+from SaitamaRobot.modules.helper_funcs.couples_mongo import get_couple, save_couple
 
 __mod_name__ = "Couples"
 
