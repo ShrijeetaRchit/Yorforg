@@ -20,17 +20,17 @@ import json
 import os
 import html
 import requests
-import Cutiepii_Robot.modules.sql.kuki_sql as sql
+import SaitamaRobot.modules.sql.kuki_sql as sql
 
 from time import sleep
 from telegram import ParseMode
-from Cutiepii_Robot import dispatcher, updater, SUPPORT_CHAT
-from Cutiepii_Robot.modules.log_channel import gloggable
+from SaitamaRobot import dispatcher, updater, SUPPORT_CHAT
+from SaitamaRobot.modules.log_channel import gloggable
 from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import CommandHandler, run_async, CallbackContext, MessageHandler, Filters
-from Cutiepii_Robot.modules.helper_funcs.filters import CustomFilters
-from Cutiepii_Robot.modules.helper_funcs.chat_status import user_admin
+from SaitamaRobot.modules.helper_funcs.filters import CustomFilters
+from SaitamaRobot.modules.helper_funcs.chat_status import user_admin
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
 @user_admin
@@ -42,14 +42,14 @@ def add_chat(update: Update, context: CallbackContext):
     is_kuki = sql.is_kuki(chat.id)
     if not is_kuki:
         sql.set_kuki(chat.id)
-        msg.reply_text("Cutiepii AI successfully enabled for this chat!")
+        msg.reply_text("Yumeko AI successfully enabled for this chat!")
         message = (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"AI_ENABLED\n"
             f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
         )
         return message
-    msg.reply_text("Cutiepii AI is already enabled for this chat!")
+    msg.reply_text("Yumeko AI is already enabled for this chat!")
     return ""
 
 
@@ -61,10 +61,10 @@ def rem_chat(update: Update, context: CallbackContext):
     user = update.effective_user
     is_kuki = sql.is_kuki(chat.id)
     if not is_kuki:
-        msg.reply_text("Cutiepii AI isn't enabled here in the first place!")
+        msg.reply_text("Yumeko AI isn't enabled here in the first place!")
         return ""
     sql.rem_kuki(chat.id)
-    msg.reply_text("Cutiepii AI disabled successfully!")
+    msg.reply_text("Yumeko AI disabled successfully!")
     message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"AI_DISABLED\n"
