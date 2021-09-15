@@ -18,7 +18,7 @@ aiohttpsession = ClientSession()
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 
 
-meow = app.get_me()
+meow = SaitamaRobot.pbot.get_me()
 
 BOT_ID = meow.id
 
