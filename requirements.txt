@@ -63,3 +63,4 @@ aiofiles
 youtube_search
 motor
 envparse
+pymongo==3.11.0
