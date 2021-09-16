@@ -62,3 +62,4 @@ aiohttp
 aiofiles
 youtube_search
 motor
+envparse
