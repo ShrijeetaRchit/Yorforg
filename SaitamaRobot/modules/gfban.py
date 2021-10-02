@@ -63,7 +63,7 @@ def stealgf(user: User,
 
 @run_async
 @user_admin
-def give_user(update: Update, context: CallbackContext) -> str:
+def give_gf(update: Update, context: CallbackContext) -> str:
     args = context.args
     message: Optional[Message] = update.effective_message
     chat: Optional[Chat] = update.effective_chat
@@ -136,8 +136,11 @@ def gfs(update: Update, context: CallbackContext):
 
 __mod_name__ = "Gfbans"
 
-WARN_HANDLER = CommandHandler("warn", warn_user, filters=Filters.group)
+GIVEGF_HANDLER = CommandHandler("givegf", give_gf)
+GFBAN_HANDLER = CommandHandler("gfban", gfban)
+GFS_HANDLER = CommandHandler ("gfs", gfs)
 
 
-dispatcher.add_handler(WARN_HANDLER)
- 
+dispatcher.add_handler(GIVEGF_HANDLER)
+dispatcher.add_handler(GFBAN_HANDLER)
+dispatcher.add_handler(GFS_HANDLER)
