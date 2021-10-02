@@ -102,9 +102,8 @@ def warn(user: User,
 
         for warn_reason in reasons:
             reply += f"\n - {html.escape(warn_reason)}"
-            
-            ban_sticker = "CAACAgUAAx0CXXjxkgACCB9hWCSQ-9pY-FpIRx2LmeZkWVt6YAACrQMAAq0xSFYD-cyP5Q39dyEE"
-         message.bot.send_sticker(ban_sticker)  
+
+        # message.bot.send_sticker(ban_sticker)  
         keyboard = None
         log_reason = (f"<b>{html.escape(chat.title)}:</b>\n"
                       f"#WARN_BAN\n"
