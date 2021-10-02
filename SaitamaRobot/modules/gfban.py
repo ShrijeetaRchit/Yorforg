@@ -42,7 +42,8 @@ from telegram.utils.helpers import mention_html
 
 def stealgf(user: User,
          chat: Chat,
-         message: Message,
+         message: Message
+
     if bot_admin(chat, user.id):
         # message.reply_text("you can't steal Gf of a Sudo")
         return
