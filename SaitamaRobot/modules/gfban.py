@@ -43,24 +43,23 @@ from telegram.utils.helpers import mention_html
 def stealgf(user: User,
          chat: Chat,
          message: Message,
-         warner: User = None) 
+         angel: User = None) 
     if bot_admin(chat, user.id):
         # message.reply_text("you can't steal Gf of a Sudo")
         return
 
     if user.id in DRAGON:
-        if warner:
+        if angel:
             message.reply_text(" you can't stole gf of a sudo.")
         return
+    if user.id in OWNER:
+       if angel:
+           message.reply_text("Devil belongs to only one girl no chnace of you here")
+       return
 
     if angel:
         angel_tag = mention_html(angel.id, angel.first_name)
 
-
-def __import_data__(chat_id, data):
-    for user_id, count in data.get("Girlfriend", {}).items():
-        for x in range(int(count)):
-            sql.stealed_user(user_id, chat_id)
 
 @run_async
 @user_admin
