@@ -40,7 +40,18 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
+def stealgf(user: User,
+         chat: Chat,
+         message: Message,
+         warner: User = None) 
+    if bot_admin(chat, user.id):
+        # message.reply_text("you can't steal Gf of a Sudo")
+        return
 
+    if user.id in DRAGON:
+        if warner:
+            message.reply_text(" you can't stole gf of a sudo.")
+        return
 
     if angel:
         angel_tag = mention_html(angel.id, angel.first_name)
