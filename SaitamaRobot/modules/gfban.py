@@ -62,10 +62,78 @@ def __import_data__(chat_id, data):
         for x in range(int(count)):
             sql.stealed_user(user_id, chat_id)
 
+@run_async
+@user_admin
+def give_user(update: Update, context: CallbackContext) -> str:
+    args = context.args
+    message: Optional[Message] = update.effective_message
+    chat: Optional[Chat] = update.effective_chat
+    angel: Optional[User] = update.effective_user
 
-__help__ = """
- • `/warns <userhandle>`*:* get a user's number, and reason, of warns.
-"""
+    user_id
+
+    if user_id:
+        if (message.reply_to_message and
+                message.reply_to_message.from_user.id == user_id):
+            return girlfriend(
+                message.reply_to_message.from_user,
+                chat,
+                message.reply_to_message,
+                angel,
+            )
+        else:
+            return girlfriend(
+                chat.get_member(user_id).user, chat, message, angel)
+    else:
+        message.reply_text("That looks like an invalid User ID to me.")
+    return ""
+
+
+@run_async
+@bot_admin
+def gfban(update: Update, context: CallbackContext) -> str:
+    args = context.args
+    message: Optional[Message] = update.effective_message
+    chat: Optional[Chat] = update.effective_chat
+    user: Optional[User] = update.effective_user
+
+    user_id = extract_user(message, args)
+
+    if user_id:
+        sql.gfban(user_id, chat.id)
+        message.reply_text("user lost all his GFS and is accused for cheating")
+        gfbanned = chat.get_member(user_id).user
+        return (f"<b>{html.escape(chat.title)}:</b>\n"
+                f"#GFbanned\n"
+                f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<b>User:</b> {mention_html(gfbanned.id, gfbanned.first_name)}")
+    else:
+        message.reply_text("No user has been designated!")
+    return ""
+
+
+@run_async
+def gfs(update: Update, context: CallbackContext):
+    args = context.args
+    message: Optional[Message] = update.effective_message
+    chat: Optional[Chat] = update.effective_chat
+    user_id = extract_user(message, args) or update.effective_user.id
+    result = sql.get_gf(user_id, chat.id)
+
+    if result and result[0] != 0:
+        num_gf
+
+        if reasons:
+            text = (
+                f"This user have {num_gf} girlfriends"
+            )
+
+            msgs = split_message(text)
+            for msg in msgs:
+                update.effective_message.reply_text(msg)
+        else:
+            
+
 
 __mod_name__ = "Gfbans"
 
