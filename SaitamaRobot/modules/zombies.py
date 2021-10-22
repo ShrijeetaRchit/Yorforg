@@ -63,6 +63,10 @@ async def zombies(event):
     del_u = 0
     del_status = "No Deleted Accounts Found, Group Is Clean."
      
+    
+    # Here laying the sanity check
+    chat = await event.get_chat()
+    admin = chat.admin_rights
     creator = chat.creator
 
     if not creator:
@@ -80,10 +84,6 @@ async def zombies(event):
         await find_zombies.edit(del_status)
         return
 
-    # Here laying the sanity check
-    chat = await event.get_chat()
-    admin = chat.admin_rights
-    creator = chat.creator
 
     # Well
     
