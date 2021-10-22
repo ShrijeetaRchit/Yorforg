@@ -8,6 +8,12 @@ from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins
 
 from SaitamaRobot import telethn, OWNER_ID, DEV_USERS, DRAGONS, TIGERS
 
+import html
+from typing import Optional
+
+from SaitamaRobot import LOGGER, TIGERS, dispatcher
+from SaitamaRobot.modules.helper_funcs.chat_status import (is_user_admin,
+                                                           user_admin)
 # =================== CONSTANT ===================
 
 BANNED_RIGHTS = ChatBannedRights(
@@ -48,7 +54,7 @@ async def is_administrator(user_id: int, message):
     return admin
 
 
-
+@user_admin
 @telethn.on(events.NewMessage(pattern=f"^[!/]zombies ?(.*)"))
 async def zombies(event):
     """ For .zombies command, list all the zombies in a chat. """
@@ -56,7 +62,9 @@ async def zombies(event):
     con = event.pattern_match.group(1).lower()
     del_u = 0
     del_status = "No Deleted Accounts Found, Group Is Clean."
-
+     
+    if not creator:
+        await event.respond("only chat owner can perform this action!")
     if con != "clean":
         find_zombies = await event.respond("Searching For Zombies...")
         async for user in event.client.iter_participants(event.chat_id):
