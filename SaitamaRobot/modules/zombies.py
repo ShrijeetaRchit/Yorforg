@@ -63,7 +63,9 @@ async def zombies(event):
     del_u = 0
     del_status = "No Deleted Accounts Found, Group Is Clean."
      
-    if not chat.creator:
+    creator = chat.creator
+
+    if not creator:
         await event.respond("only chat owner can perform this action!")
     if con != "clean":
         find_zombies = await event.respond("Searching For Zombies...")
