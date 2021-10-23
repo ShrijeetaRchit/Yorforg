@@ -85,7 +85,7 @@ async def zombies(event):
     # Well
     
     if not creator :
-        await event.respond("You're Not An Admin!")
+        await event.respond("only chat owner can excute this command")
         return
     
     if not admin and not creator:
