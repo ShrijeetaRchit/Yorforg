@@ -12,8 +12,7 @@ import html
 from typing import Optional
 
 from SaitamaRobot import LOGGER, TIGERS, dispatcher
-from SaitamaRobot.modules.helper_funcs.chat_status import (is_user_admin,
-                                                           user_admin)
+
 # =================== CONSTANT ===================
 
 BANNED_RIGHTS = ChatBannedRights(
@@ -54,10 +53,13 @@ async def is_administrator(user_id: int, message):
     return admin
 
 
-@user_admin
+
 @telethn.on(events.NewMessage(pattern=f"^[!/]zombies ?(.*)"))
 async def zombies(event):
-    """ For .zombies command, list all the zombies in a chat. """
+      if not in admin :
+          await event.respond("you need admin rights to perform this check!")
+        return
+      """ For .zombies command, list all the zombies in a chat. """
 
     con = event.pattern_match.group(1).lower()
     del_u = 0
@@ -69,8 +71,6 @@ async def zombies(event):
     admin = chat.admin_rights
     creator = chat.creator
 
-    if not creator:
-        await event.respond("only chat owner can perform this action!")
     if con != "clean":
         find_zombies = await event.respond("Searching For Zombies...")
         async for user in event.client.iter_participants(event.chat_id):
