@@ -6,12 +6,7 @@ from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins
 
-from SaitamaRobot import telethn, OWNER_ID, DEV_USERS, DRAGONS, TIGERS
-
-import html
-from typing import Optional
-
-from SaitamaRobot import LOGGER, TIGERS, dispatcher
+from SaitamaRobot import telethn, OWNER_ID, DEV_USERS, DRAGONS, DEMONS
 
 # =================== CONSTANT ===================
 
@@ -39,7 +34,7 @@ UNBAN_RIGHTS = ChatBannedRights(
     embed_links=None,
 )
 
-OFFICERS = [OWNER_ID] + DEV_USERS + DRAGONS + TIGERS
+OFFICERS = [OWNER_ID] + DEV_USERS + DRAGONS + DEMONS
 
 # Check if user has admin rights
 async def is_administrator(user_id: int, message):
@@ -53,20 +48,14 @@ async def is_administrator(user_id: int, message):
     return admin
 
 
-@admin
-@telethn.on(events.NewMessage(pattern=f"^[!/]zombies ?(.*)"))
+
+@telethn.on(events.NewMessage(pattern="^[!/]zombies ?(.*)"))
 async def zombies(event):
-      """ For .zombies command, list all the zombies in a chat. """
+    """ For .zombies command, list all the zombies in a chat. """
 
     con = event.pattern_match.group(1).lower()
     del_u = 0
     del_status = "No Deleted Accounts Found, Group Is Clean."
-     
-    
-    # Here laying the sanity check
-    chat = await event.get_chat()
-    admin = chat.admin_rights
-    creator = chat.creator
 
     if con != "clean":
         find_zombies = await event.respond("Searching For Zombies...")
@@ -77,17 +66,20 @@ async def zombies(event):
                 await sleep(1)
         if del_u > 0:
             del_status = f"Found **{del_u}** Zombies In This Group.\
-            \nClean Them By Using :-\n 👉 `/zombies clean`"
+            \nClean Them By Using - `/zombies clean`"
         await find_zombies.edit(del_status)
         return
 
+    # Here laying the sanity check
+    chat = await event.get_chat()
+    admin = chat.admin_rights
+    creator = chat.creator
 
     # Well
-    
-    if not await is_administrator(user_id=event.from_id, message=event) :
-        await event.respond("only chat owner can excute this command")
+    if not await is_administrator(user_id=event.from_id, message=event):
+        await event.respond("You're Not An Admin!")
         return
-    
+
     if not admin and not creator:
         await event.respond("I Am Not An Admin Here!")
         return
@@ -119,3 +111,5 @@ async def zombies(event):
         \n`{del_a}` Zombie Admin Accounts Are Not Removed!"
 
     await cleaning_zombies.edit(del_status)
+
+__mod_name__ = "Zombies"
