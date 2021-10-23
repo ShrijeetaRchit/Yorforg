@@ -12,8 +12,9 @@ import html
 from typing import Optional
 
 from SaitamaRobot import LOGGER, TIGERS, dispatcher
-from SaitamaRobot.modules.helper_funcs.chat_status import (is_user_admin,
-                                                           user_admin)
+from SaitamaRobot.modules.helper_funcs import chat_status
+
+user_admin = chat_status.user_admin
 # =================== CONSTANT ===================
 
 BANNED_RIGHTS = ChatBannedRights(
