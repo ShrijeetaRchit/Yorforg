@@ -84,7 +84,7 @@ async def zombies(event):
 
     # Well
     
-    if not creator (user_id=event.from_id, message=event):
+    if not creator :
         await event.respond("You're Not An Admin!")
         return
     
