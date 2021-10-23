@@ -62,3 +62,10 @@ async def is_administrator(user_id: int, message):
 
 @run_async
 @admin
+def zombies(event):
+    """ For .zombies command, list all the zombies in a chat. """
+
+    con = event.pattern_match.group(1).lower()
+    del_u = 0
+    del_status = "No Deleted Accounts Found, Group Is Clean."
+     
