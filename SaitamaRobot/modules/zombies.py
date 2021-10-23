@@ -14,6 +14,8 @@ from typing import Optional
 from SaitamaRobot import LOGGER, TIGERS, dispatcher
 from SaitamaRobot.modules.helper_funcs import chat_status
 
+from telegram.ext.dispatcher import run_async
+
     user_admin = chat_status.user_admin
     chat = await event.get_chat()
     admin = chat.admin_rights
@@ -57,3 +59,6 @@ async def is_administrator(user_id: int, message):
             admin = True
             break
     return admin
+
+@run_async
+@admin
