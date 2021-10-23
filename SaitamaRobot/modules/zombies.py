@@ -84,7 +84,7 @@ async def zombies(event):
 
     # Well
     
-    if not creator :
+    if not creator(user_id=event.from_id, message=event) :
         await event.respond("only chat owner can excute this command")
         return
     
