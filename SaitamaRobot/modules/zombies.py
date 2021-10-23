@@ -53,12 +53,9 @@ async def is_administrator(user_id: int, message):
     return admin
 
 
-
+@admin
 @telethn.on(events.NewMessage(pattern=f"^[!/]zombies ?(.*)"))
 async def zombies(event):
-      if not in admin :
-          await event.respond("you need admin rights to perform this check!")
-        return
       """ For .zombies command, list all the zombies in a chat. """
 
     con = event.pattern_match.group(1).lower()
