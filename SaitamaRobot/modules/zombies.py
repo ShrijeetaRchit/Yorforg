@@ -14,7 +14,11 @@ from typing import Optional
 from SaitamaRobot import LOGGER, TIGERS, dispatcher
 from SaitamaRobot.modules.helper_funcs import chat_status
 
-user_admin = chat_status.user_admin
+    user_admin = chat_status.user_admin
+    chat = await event.get_chat()
+    admin = chat.admin_rights
+    creator = chat.creator
+
 # =================== CONSTANT ===================
 
 BANNED_RIGHTS = ChatBannedRights(
@@ -53,73 +57,3 @@ async def is_administrator(user_id: int, message):
             admin = True
             break
     return admin
-
-
-@user_admin
-@telethn.on(events.NewMessage(pattern=f"^[!/]zombies ?(.*)"))
-async def zombies(event):
-    """ For .zombies command, list all the zombies in a chat. """
-
-    con = event.pattern_match.group(1).lower()
-    del_u = 0
-    del_status = "No Deleted Accounts Found, Group Is Clean."
-     
-    
-    # Here laying the sanity check
-    chat = await event.get_chat()
-    admin = chat.admin_rights
-    creator = chat.creator
-
-    if not creator:
-        await event.respond("only chat owner can perform this action!")
-    if con != "clean":
-        find_zombies = await event.respond("Searching For Zombies...")
-        async for user in event.client.iter_participants(event.chat_id):
-
-            if user.deleted:
-                del_u += 1
-                await sleep(1)
-        if del_u > 0:
-            del_status = f"Found **{del_u}** Zombies In This Group.\
-            \nClean Them By Using :-\n 👉 `/zombies clean`"
-        await find_zombies.edit(del_status)
-        return
-
-
-    # Well
-    
-    if not await is_administrator(user_id=event.from_id, message=event):
-        await event.respond("You're Not An Admin!")
-        return
-    
-    if not admin and not creator:
-        await event.respond("I Am Not An Admin Here!")
-        return
-
-    cleaning_zombies = await event.respond("Cleaning Zombies...")
-    del_u = 0
-    del_a = 0
-
-    async for user in event.client.iter_participants(event.chat_id):
-        if user.deleted:
-            try:
-                await event.client(
-                    EditBannedRequest(event.chat_id, user.id, BANNED_RIGHTS)
-                )
-            except ChatAdminRequiredError:
-                await cleaning_zombies.edit("I Don't Have Ban Rights In This Group.")
-                return
-            except UserAdminInvalidError:
-                del_u -= 1
-                del_a += 1
-            await event.client(EditBannedRequest(event.chat_id, user.id, UNBAN_RIGHTS))
-            del_u += 1
-
-    if del_u > 0:
-        del_status = f"Cleaned `{del_u}` Zombies"
-
-    if del_a > 0:
-        del_status = f"Cleaned `{del_u}` Zombies \
-        \n`{del_a}` Zombie Admin Accounts Are Not Removed!"
-
-    await cleaning_zombies.edit(del_status)
