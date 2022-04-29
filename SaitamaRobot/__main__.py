@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello there , I am Yumeko Jabami , I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/b713d6ffca13aa4d69a9a.jpg)
+Hello there , I am Yorforger , I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/b713d6ffca13aa4d69a9a.jpg)
 """
 
 buttons = [
