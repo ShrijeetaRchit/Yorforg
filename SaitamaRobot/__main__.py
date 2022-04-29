@@ -74,38 +74,38 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello there , I am Yorforger , I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://telegra.ph/file/b713d6ffca13aa4d69a9a.jpg)
+Hello there , I am Yorforger , I am Groups Management Bot !! I can Help You Manage Your Group for you!!, send /help for command list...[.](https://te.legra.ph/file/4ed2c6455ba57f2a14c77.jpg)
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="☠️ Take me to Gambling ☠️", url="t.me/yumekojabami_robot?startgroup=true"),
+            text="☠️ Take me to your base ☠️", url="t.me/forgerxbot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="⚙️Support⚙️ ", url=f"https://t.me/yumeko_support"),
+        InlineKeyboardButton(text="⚙️Support⚙️ ", url=f"https://t.me/OtakuAuraX"),
         InlineKeyboardButton(
-            text="🔥Anime🔥", url=f"https://t.me/Anime_English_Dub_Devil/686"),
-        InlineKeyboardButton(text="📢Updates📢", url=f"https://t.me/YumekoJabamiUpdates/11"
+            text="✨All Anime Related Stuff ✨", url=f"https://t.me/anime_related_stuff"),
+        InlineKeyboardButton(text="📢Updates📢", url=f"https://t.me/Forger_updates"
             
         
         ),
     ],
     [
-        InlineKeyboardButton(text="✅ Commands ✅", callback_data="help_back"),
+        InlineKeyboardButton(text="✅ Gadgets ✅", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
-Hai hai , I am neko-yumeko[.](https://telegra.ph/file/b23d290b8ec810bf6d2ee.jpg) 
+Myself Yor Forger, Yes i am on my mission [.](https://te.legra.ph/file/356ef80f891e4ae6dfb5a.jpg) 
 """
 
-yone_IMG = "https://telegra.ph/file/2aea4cfb32a76c857217c.jpg"
+yone_IMG = "https://te.legra.ph/file/1aeb21e4086a8a8f47951.jpg"
 
-YUMEKOIMGSTART = """https://telegra.ph/file/aecf1d14d682d88ec1ad9.jpg"""
+YUMEKOIMGSTART = """https://te.legra.ph/file/a79056be9a828bb8eeb04.jpg"""
 
-DONATE_STRING = """too lazy to add donate strings so leave it"""
+DONATE_STRING = """I have enough money no thanks """
 
 IMPORTED = {}
 MIGRATEABLE = []
